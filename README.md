@@ -1,4 +1,3 @@
-## Derrick Dillon
+# derrickmdillon.github.io
 
-Irish software developer.
-
+My personal website
