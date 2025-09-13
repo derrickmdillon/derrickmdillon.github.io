@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume - Derrick M. Dillon</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #6366f1; }
+        h2 { color: #374151; border-bottom: 2px solid #6366f1; }
+        .contact { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Derrick M. Dillon</h1>
+    <div class="contact">
+        <p>Full-Stack Developer & Technology Enthusiast</p>
+        <p>Email: derrick@example.com | GitHub: github.com/derrickmdillon</p>
+        <p>Website: derrickmdillon.github.io</p>
+    </div>
+    
+    <h2>Professional Summary</h2>
+    <p>Passionate software developer with 5+ years of experience in modern web technologies. Expertise in Angular, React, Node.js, and cloud platforms. Proven track record of delivering high-quality applications and leading development teams.</p>
+    
+    <h2>Technical Skills</h2>
+    <ul>
+        <li><strong>Frontend:</strong> Angular, React, Vue.js, TypeScript, JavaScript, HTML5, CSS3, SCSS</li>
+        <li><strong>Backend:</strong> Node.js, Express.js, NestJS, Python, Java</li>
+        <li><strong>Database:</strong> PostgreSQL, MongoDB, Firebase</li>
+        <li><strong>Cloud & Tools:</strong> AWS, Docker, Git, Jest, Webpack</li>
+    </ul>
+    
+    <h2>Professional Experience</h2>
+    
+    <h3>Senior Full-Stack Developer - Tech Innovations Inc. (Jan 2022 - Present)</h3>
+    <ul>
+        <li>Lead development of enterprise web applications</li>
+        <li>Increased application performance by 40% through optimization</li>
+        <li>Mentor junior developers and implement best practices</li>
+    </ul>
+    
+    <h3>Full-Stack Developer - Digital Solutions LLC (Mar 2020 - Dec 2021)</h3>
+    <ul>
+        <li>Developed multiple client-facing web applications</li>
+        <li>Built responsive e-commerce platform serving 10k+ daily users</li>
+        <li>Implemented automated testing increasing code coverage to 85%</li>
+    </ul>
+    
+    <h2>Education</h2>
+    <p><strong>Bachelor of Science in Computer Science</strong><br>University of Technology (2013-2017)</p>
+    
+    <h2>Projects</h2>
+    <ul>
+        <li><strong>Portfolio Website:</strong> Modern Angular portfolio with dark/light mode</li>
+        <li><strong>E-Commerce Platform:</strong> Full-stack solution with payment processing</li>
+        <li><strong>Task Management App:</strong> Real-time collaborative application</li>
+    </ul>
+</body>
+</html>

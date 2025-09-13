@@ -1,0 +1,269 @@
+.experience-section {
+  background: var(--bg-primary);
+
+  .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: relative;
+      margin-right: 2rem;
+      flex-shrink: 0;
+
+      .timeline-dot {
+        width: 16px;
+        height: 16px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        border: 4px solid var(--card-bg);
+        box-shadow: 0 0 0 4px var(--accent-color);
+        position: relative;
+        z-index: 2;
+      }
+
+      .timeline-line {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: calc(100% + 3rem);
+        background: linear-gradient(
+          to bottom,
+          var(--accent-color) 0%,
+          var(--border-color) 100%
+        );
+        z-index: 1;
+      }
+    }
+
+    .timeline-content {
+      flex: 1;
+
+      .experience-card {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .experience-header {
+          margin-bottom: 1.5rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid var(--border-color);
+
+          .job-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+          }
+
+          .company-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+
+            .company-name {
+              font-size: 1.1rem;
+              font-weight: 500;
+              color: var(--accent-color);
+            }
+
+            .employment-type {
+              background: rgba(var(--accent-color-rgb, 99, 102, 241), 0.1);
+              color: var(--accent-color);
+              padding: 0.25rem 0.75rem;
+              border-radius: 12px;
+              font-size: 0.8rem;
+              font-weight: 500;
+              border: 1px solid rgba(var(--accent-color-rgb, 99, 102, 241), 0.2);
+            }
+          }
+
+          .date-range {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+
+            .separator {
+              color: var(--text-secondary);
+            }
+
+            .duration {
+              color: var(--text-secondary);
+              font-style: italic;
+            }
+          }
+        }
+
+        .experience-content {
+          .job-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          }
+
+          .achievements {
+            margin-bottom: 1.5rem;
+
+            h4 {
+              font-size: 1rem;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 0.75rem;
+            }
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+
+              li {
+                position: relative;
+                padding-left: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: var(--text-secondary);
+                line-height: 1.5;
+
+                &::before {
+                  content: '▶';
+                  position: absolute;
+                  left: 0;
+                  color: var(--accent-color);
+                  font-size: 0.8rem;
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+
+          .technologies {
+            h4 {
+              font-size: 1rem;
+              font-weight: 600;
+              color: var(--text-primary);
+              margin-bottom: 0.75rem;
+            }
+
+            .tech-tags {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+
+              .tech-tag {
+                background: var(--bg-secondary);
+                color: var(--text-secondary);
+                padding: 0.25rem 0.75rem;
+                border-radius: 16px;
+                font-size: 0.8rem;
+                font-weight: 500;
+                border: 1px solid var(--border-color);
+                transition: all 0.3s ease;
+
+                &:hover {
+                  background: rgba(var(--accent-color-rgb, 99, 102, 241), 0.1);
+                  color: var(--accent-color);
+                  border-color: var(--accent-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-item {
+      .timeline-marker {
+        margin-right: 1rem;
+
+        .timeline-line {
+          height: calc(100% + 2rem);
+        }
+      }
+
+      .experience-card {
+        padding: 1.5rem;
+
+        .experience-header {
+          .company-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+          }
+
+          .date-range {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timeline {
+      margin: 0 1rem;
+    }
+
+    .timeline-item {
+      flex-direction: column;
+      margin-bottom: 2rem;
+
+      .timeline-marker {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+
+        .timeline-line {
+          display: none;
+        }
+      }
+
+      .experience-card {
+        padding: 1.25rem;
+
+        .experience-header {
+          .job-title {
+            font-size: 1.25rem;
+          }
+        }
+
+        .experience-content {
+          .technologies .tech-tags {
+            gap: 0.4rem;
+
+            .tech-tag {
+              font-size: 0.75rem;
+              padding: 0.2rem 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
