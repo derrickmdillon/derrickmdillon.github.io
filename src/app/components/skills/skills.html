@@ -1,0 +1,73 @@
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <h2 class="section-title">Skills & Technologies</h2>
+    
+    <div class="skills-content">
+      <div class="skills-categories">
+        <div class="skill-category" *ngFor="let category of skillCategories">
+          <h3 class="category-title">{{ category.name }}</h3>
+          <div class="skills-grid">
+            <div class="skill-item" *ngFor="let skill of category.skills">
+              <div class="skill-icon">
+                <div class="icon-placeholder" [style.background-color]="skill.color">
+                  {{ skill.name.charAt(0) }}
+                </div>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">{{ skill.name }}</span>
+                <div class="skill-level">
+                  <div class="skill-bar">
+                    <div 
+                      class="skill-progress" 
+                      [style.width.%]="skill.level"
+                      [style.background-color]="skill.color">
+                    </div>
+                  </div>
+                  <span class="skill-percentage">{{ skill.level }}%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-summary">
+        <div class="summary-card">
+          <h3>What I Bring</h3>
+          <ul>
+            <li>
+              <strong>Frontend Excellence:</strong> Creating beautiful, responsive user interfaces with modern frameworks
+            </li>
+            <li>
+              <strong>Backend Proficiency:</strong> Building robust APIs and server-side applications
+            </li>
+            <li>
+              <strong>Full-Stack Integration:</strong> Seamlessly connecting frontend and backend systems
+            </li>
+            <li>
+              <strong>Modern Tooling:</strong> Leveraging the latest development tools and best practices
+            </li>
+            <li>
+              <strong>Performance Optimization:</strong> Ensuring fast, scalable applications
+            </li>
+          </ul>
+        </div>
+
+        <div class="summary-card">
+          <h3>Always Learning</h3>
+          <p>
+            Technology evolves rapidly, and I'm passionate about staying current with the latest trends, 
+            frameworks, and best practices. I continuously invest time in learning new technologies and 
+            improving my craft.
+          </p>
+          <div class="learning-list">
+            <span class="learning-item">AI/ML Integration</span>
+            <span class="learning-item">Cloud Architecture</span>
+            <span class="learning-item">DevOps Practices</span>
+            <span class="learning-item">Web3 Technologies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
